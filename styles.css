@@ -6,15 +6,23 @@ body{
     padding: 0;
 }
 
-header{
+.navbar {
     z-index: 999;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: 0.5s flex-end;
+    background-color: #144659;
+    transition: 1s ease;
+    box-shadow:0px 1px 15px -1px #000000;
+}
+
+.nav--hidden{
+    transform: translateY(-120px);
+    
 }
 
 img.logo {
@@ -30,11 +38,11 @@ img.logo {
     box-shadow: 0px 5px 5px black;
     border-radius: 50px;
     height: 73px;
-    width: 73   px;
+    width: 73px;
 
 }
 
-header .navigation{
+.navbar .navigation{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -105,26 +113,17 @@ ul{
 .Presentation {
     height:450px;
     justify-content: center;
-    margin-left: 200px;
+    margin: 250px;
     padding-left: 10px;
-    margin-top: 250px;
-    margin-bottom: 250px;
-    border-left:1px #C4EAF2 solid;
-    
-}
-
-.titre {
-    color: #FFFFFF;
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom:0;
+    border-left:1px #C4EAF2 solid; 
 }
 
 h1{
     color: #E88E2A;
     font-size: 64px;
-    margin-top: 0;
-    margin-bottom:0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+
 }
 
 .Dev{
@@ -135,22 +134,16 @@ h1{
 p{
     color: #C4EAF2;
     font-size: 24px;
-    width: 600px;
-    font-family: "Montserrat",Extra-light, sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 article.About { 
-    height: 800px;
-    padding-top: 100px;
-
-    
+    margin: 100px;
 }
 
 .ABOUT{
-    margin-left: 0px;
-    margin-top: 100px;
+    margin: 100px;
     display: flex; 
-    justify-content: space-around;
 }
     
 .About h2{
@@ -159,14 +152,16 @@ article.About {
 }
 
 .textcentre{
-    margin-left: 100px;
+    width: 50%;
     font-size: 24px;    
 }
 
-img.Moi{
-    width: 350px;
-    height: 400px;
-    filter: blur(2px);
+img.Moi{ 
+    margin: 50px;
+    width: 35%;
+    height: 40%;
+    filter: grayscale(80%);
+    border: 1px solid #E88E2A;
 }
 
 img.Moi:hover{
@@ -177,20 +172,171 @@ span{
     color: #32C8D9;
 }
 
-@media (max-width:1040px){
-    header {
+
+article.Work{   
+    width: 100%;
+    height:700px;
+}
+
+.Work h2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slidershow{
+    width: 60%;
+    height: 60%;
+    overflow: hidden;
+    border: #E88E2A solid 5px;
+    border-radius: 80px;
+}
+.middle{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.nav{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar{
+    background-color:#FFFFFF; ;
+    width: 60px;
+    height: 20px;
+    border: 3px solid #E88E2A;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover{
+    background: #32C8D9;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+.slide img{
+    width: 100%;
+    height: 88%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+.Contact{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 100px;
+    width: 100%;
+    height: 300px;
+}
+
+.Contact h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titre {
+    margin: 50px;
+    text-align: center;
+}
+
+.Contact p{
+    text-align: center;
+}
+
+.reseaux{
+    display: flex;
+}
+
+.reseaux img {
+    padding: 60px;
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+.reseaux img:hover {
+    box-shadow: 0px 5px 5px black;
+    background-color:#32C8D9;
+}
+
+footer .footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 300px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*projets Stack*/
+
+.article-stack, .article-donut, .article-php{
+    margin: 100px;
+}
+
+.article-stack img, .article-donut img, .article-php img  {
+    margin: 20px;
+    width: 600px;
+    height: 400px;
+}
+
+.article-stack p, .article-donut p, .article-php p{
+    margin: 20px;
+}
+
+article .exemple-stack{
+    margin: 20px;
+    width: 90%;
+    height: 100px;
+}
+
+@media (max-width:900px){
+    .navbar {
         padding: 12px 20px;
     }
 
-    article{
-        padding: 100px 20px;
+    p {
+        font-size: 18px;
     }
-
-    header .navigation{
+    .navbar .navigation{
         display: none;
     }
 
-    header .navigation.active{ 
+    .navbar .navigation.active{ 
         position:fixed;
         width: 100%;
         height: 100vh;
@@ -202,19 +348,19 @@ span{
         background: rgba (1, 1, 1, 0.5);
     }
 
-    header .navigation ul li {
+    .navbar .navigation ul li {
         color: #05080D;
         font-size:1.2em;
         margin: 40px;
         margin-left: 20px;
     }
 
-    header .navigation ul li a:before{
+    .navbar .navigation ul li a:before{
         background: #222;
         height: 2px;
     }
 
-    header .navigation.active ul{
+    .navbar .navigation.active ul{
         background: #C4EAF2;
         width: 200px;
         max-width: 200px;
@@ -245,116 +391,84 @@ span{
             background-position: center;
             transition: 0.3s ease;
     }
-}
 
-article.Work{   
-    width: 100%;
-    height:700px;
-}
+    .Presentation{
+        width: 60%;
+        height: 50%;
+        margin: 100px;
+        
+    }
 
-.Work h2{
-    margin-left: 25px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
+    .Dev{
+        font-size:24px;
+    }
 
-.slidershow{
-    width: 700px;
-    height: 400px;
-    overflow: hidden;
-    border: #E88E2A solid 5px;
-    border-radius: 80px;
-  }
-  .middle{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-  .nav{
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-  }
-  .bar{
-    width: 60px;
-    height: 20px;
-    border: 2px solid #E88E2A;
-    margin: 6px;
-    cursor: pointer;
-    transition: 0.4s;
-  }
-  .bar:hover{
-    background: #32C8D9;
-  }
-  
-  input[name="r"]{
-      position: absolute;
-      visibility: hidden;
-  }
-  
-  .slides{
-    width: 500%;
-    height: 100%;
-    display: flex;
-  }
-  
-  .slide{
-    width: 20%;
-    transition: 0.6s;
-  }
-  .slide img{
-    width: 100%;
-    height: 100%;
-  }
-  
-  #r1:checked ~ .s1{
-    margin-left: 0;
-  }
-  #r2:checked ~ .s1{
-    margin-left: -20%;
-  }
-  #r3:checked ~ .s1{
-    margin-left: -40%;
-  }
-  #r4:checked ~ .s1{
-    margin-left: -60%;
-  }
-  #r5:checked ~ .s1{
-    margin-left: -80%;
-  }
+    h1{
+        font-size:35px;
+    }
 
-.Contact{
-    width: 600px;
-    height: 300px;
-    margin-top: 200px;
-    margin-left: 420px;
-}
+    .nav{
+        bottom:0;
+    }
 
-.Contact h2 {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
+    .bar{
+        height: 12px; 
+        width: 30px ;
+    }
 
-.Contact .titre {
-    text-align: center;
-    padding-top: 50px;
-}
+    .ABOUT{
+        margin: 0;
+        flex-direction: column;
+    }
 
-.Contact p{
-    text-align: center;
-}
+    .About h2{
+        margin: 0;
+    }
 
-.Contact .button{
-    margin-left: 230px;
-}
+    .textcentre{
+        font-size:18px;
+        margin-top: 50px;
+        width:100%;
+    }
 
-footer .footer{
-    width: 100%;
-    text-align: center;
-    margin-top: 200px;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+    .ABOUT .Moi{
+        height: 60%;
+        width: 60%;
+        filter: none;
+    }
+
+    .Work .slidershow{
+        height: 250px;
+        width: 350px;
+    }
+
+    .Contact .reseaux img{
+       padding:70px 20px;
+    }
+
+    footer .footer{
+        font-size:12px;
+    }
+
+    .article-stack, .article-donut, .article-php{
+        padding-top: 100px;
+        margin: 100px;
+    }
+
+    .article-stack img, .article-donut img, .article-php img {
+    margin: 10px;
+    width: 250px;
+    height: 150px;
+    }
+
+    .article-stack p, .article-donut p, .article-php p{
+    margin: 10px;
+    font-size: 14px;
+    }
+
+    article .exemple-stack{
+        margin: 10px;
+        width: 100%;
+        height: 100%;
+    }
 }

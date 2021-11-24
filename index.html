@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -11,7 +11,7 @@
     <title>Portfolio</title>
 </head>
 <body>
-<header>
+<header class="navbar">
     <a href="index.html"><img class="logo" src="Images/Logo.svg" alt="logo"></img></a>
     <div class="menu-btn"></div>
         <nav class="navigation">   
@@ -25,12 +25,12 @@
         </nav>
 </header>
     <article class="Presentation">
-        <p class="titre">Bonjour, je m'appelle</p>
+        <p>Bonjour, je m'appelle</p>
             <h1>Théo ROBILLARD</h1>
             <p class="Dev">Je suis Web Developpeur Junior.</p>
-            <p>J’effectue actuelement une formation
-                developpeur Web et Web mobile avec SIMPLON
-                afin d’obtenir une certification reconnu équivalente 
+            <p>J’effectue actuellement une formation
+                Développeur Web et Web mobile avec SIMPLON
+                afin d’obtenir une certification reconnue équivalente 
                 à BAC +2.</p>
     </article>
     <article class="About">
@@ -40,7 +40,7 @@
                     Je suis donc <span>revenu aux sources</span>, et désormais, je fais quelque chose que j’apprécie.<br>
                     Lors de mon Bac, j’ai pu voir les bases de HTML et CSS, ce qui me sert énormément dans ma formation actuelle.<br><br>
                     
-                    Voici quelques languages avec lesquels j’ai eu l’occasion de travailler :<br><br>
+                    Voici quelques langages avec lesquels j’ai eu l’occasion de travailler :<br><br>
                     
                     <span>-HTML                              -JAVASCRIPT
                     -CSS                                  -PHP</span></p>
@@ -56,13 +56,13 @@
               <input type="radio" name="r" id="r2">
               <input type="radio" name="r" id="r3">
               <div class="slide s1">
-                <a href="pages/projet-1.html" target="_blank"><img src="Images/Stackoverflow.png" alt=""></a>
+                <a href="pages/projet-1.html" target="_blank"><img src="Images/Stackoverflow.png" alt="Projet Stackoverflow"></a>
               </div>
               <div class="slide">
-                <a href="pages/projet-2.html" target="_blank"><img src="Images/DonutWhole.png" alt=""></a>
+                <a href="pages/projet-2.html" target="_blank"><img src="Images/DonutWhole.png" alt="Projet DonutWhole"></a>
               </div>
               <div class="slide">
-                <a href="pages/projet-3.html" target="_blank"><img src="Images/PHP.png" alt=""></a>
+                <a href="pages/projet-3.html" target="_blank"><img src="Images/PHP.png" alt="Exercices PHP"></a>
               </div>
             </div>
       
@@ -72,16 +72,19 @@
               <label for="r3" class="bar"></label>
             </div>
           </div>
-                
-                
-               
-            </div>
+    </div>
     </article>
     <article class="Contact">
         <div id="03"><h2><span>03.</span> What's Next ?</h2></div>
             <p class="titre">Entrer en contact</p>
             <p>Pour toutes demandes, cliquez ci dessous.</p>
             <a href="mailto:theorobillard@live.com"><button class="button" type="button">ici</button></a>
+        <div class="reseaux">
+            <a href="https://gitlab.com/TheoROB" target="_blank"><img src="Images/gitlab-brands.svg"></a>
+            <a href="https://www.linkedin.com/in/theo-robillard-08104a1a4/" target="_blank"><img src="Images/linkedin-brands.svg"></a>
+            <a href="https://www.hackerrank.com/dashboard" target="_blank"><img src="Images/hackerrank-brands.svg"></a>
+        </div>
+
     </article>
     <footer>
         <p class="footer">Created and designed by Théo ROBILLARD</p>
@@ -95,6 +98,20 @@
             menuBtn.classList.toggle("active");
             navigation.classList.toggle("active");
         });
+        
+            const nav = document.querySelector('.navbar');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener("scroll", () => {
+                if(lastScrollY < window.scrollY){
+                    nav.classList.add("nav--hidden");
+                } else {
+                    nav.classList.remove("nav--hidden");
+                }
+
+                lastScrollY = window.scrollY;
+            });
+        
         
     </script>
     </body>

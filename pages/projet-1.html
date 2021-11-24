@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles.css">
@@ -11,19 +11,32 @@
     <title>Stackoverflow</title>
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <a href="../index.html"><img class="logo" src="../Images/Logo.svg" alt="logo"></img></a>
-        <div class="menu-btn"></div>
-            <nav class="navigation">   
-                    <ul>
-                        <li><a href="#01"><span>01.</span> About</a></li>
-                        <li><a href="#02"><span>02.</span> Work</a></li>
-                        <li><a href="#03"><span>03.</span> Contact</a></li>
-                        <button class="button" type="button"><a href="Resume/CV.jpg">RESUME</a></button>
-                    </ul>
-                
-            </nav>
     </header>
-    
+    <article class="article-stack">
+        <h1>Refaire une page du site Stackoverflow</h1>
+            <img src="../Images/Stackoverflow.png">
+                <p>Durant ce projet, nous avons eu à reproduire la page ci-dessus. Le travail étant à faire par groupe, nous avons réparti les tâches. Chaque membre devait effectuer certaines tâches définit préalablement sur le site Trello. Ci-dessous un exemple d'une tâche que j'ai dû effectuer.
+                </p>
+            <img class="exemple-stack" src="../Images/Projets/Capture d’écran 2021-11-24 à 11.24.49.png">
+    </article>
+    <footer>
+        <p class="footer">Created and designed by Théo ROBILLARD</p>
+    </footer>
+    <script>
+        const nav = document.querySelector('.navbar');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener("scroll", () => {
+                if(lastScrollY < window.scrollY){
+                    nav.classList.add("nav--hidden");
+                } else {
+                    nav.classList.remove("nav--hidden");
+                }
+
+                lastScrollY = window.scrollY;
+            });
+    </script>
 </body>
 </html>
