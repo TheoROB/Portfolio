@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+<header>
+    <a href="index.html"><img class="logo" src="Images/Logo.svg" alt="logo"></img></a>
+    <div class="menu-btn"></div>
+        <nav class="navigation">   
+                <ul>
+                    <li><a href="#01"><span>01.</span> About</a></li>
+                    <li><a href="#02"><span>02.</span> Work</a></li>
+                    <li><a href="#03"><span>03.</span> Contact</a></li>
+                    <button class="button" type="button"><a href="Resume/CV.jpg">RESUME</a></button>
+                </ul>
+            
+        </nav>
+</header>
+    <article class="Presentation">
+        <p class="titre">Bonjour, je m'appelle</p>
+            <h1>Théo ROBILLARD</h1>
+            <p class="Dev">Je suis Web Developpeur Junior.</p>
+            <p>J’effectue actuelement une formation
+                developpeur Web et Web mobile avec SIMPLON
+                afin d’obtenir une certification reconnu équivalente 
+                à BAC +2.</p>
+    </article>
+    <article class="About">
+        <div id="01"><h2><span>01.</span> About</h2></div>
+            <aside class="ABOUT">
+                <p class="textcentre">Après avoir effectué un bac STI2D option Informatique, j’ai eu l’occasion de faire un BTS immobilier, que j’ai malheureusement détesté.<br>
+                    Je suis donc <span>revenu aux sources</span>, et désormais, je fais quelque chose que j’apprécie.<br>
+                    Lors de mon Bac, j’ai pu voir les bases de HTML et CSS, ce qui me sert énormément dans ma formation actuelle.<br><br>
+                    
+                    Voici quelques languages avec lesquels j’ai eu l’occasion de travailler :<br><br>
+                    
+                    <span>-HTML                              -JAVASCRIPT
+                    -CSS                                  -PHP</span></p>
+                <img class="Moi" src="Images/iii.jpg" alt="photo de moi"></img>
+            </aside>
+    </article>
+    <article class="Work">
+        <div id="02"><h2><span>02.</span> Some Work I Did</h2></div>
+        <div class="slidershow middle">
+
+            <div class="slides">
+              <input type="radio" name="r" id="r1" checked>
+              <input type="radio" name="r" id="r2">
+              <input type="radio" name="r" id="r3">
+              <div class="slide s1">
+                <a href="pages/projet-1.html" target="_blank"><img src="Images/Stackoverflow.png" alt=""></a>
+              </div>
+              <div class="slide">
+                <a href="pages/projet-2.html" target="_blank"><img src="Images/DonutWhole.png" alt=""></a>
+              </div>
+              <div class="slide">
+                <a href="pages/projet-3.html" target="_blank"><img src="Images/PHP.png" alt=""></a>
+              </div>
+            </div>
+      
+            <div class="nav">
+              <label for="r1" class="bar"></label>
+              <label for="r2" class="bar"></label>
+              <label for="r3" class="bar"></label>
+            </div>
+          </div>
+                
+                
+               
+            </div>
+    </article>
+    <article class="Contact">
+        <div id="03"><h2><span>03.</span> What's Next ?</h2></div>
+            <p class="titre">Entrer en contact</p>
+            <p>Pour toutes demandes, cliquez ci dessous.</p>
+            <a href="mailto:theorobillard@live.com"><button class="button" type="button">ici</button></a>
+    </article>
+    <footer>
+        <p class="footer">Created and designed by Théo ROBILLARD</p>
+    </footer>
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+        
+    </script>
+    </body>
+</html>

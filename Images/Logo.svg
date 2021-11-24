@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Calque_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 141.73 141.73"
+   style="enable-background:new 0 0 141.73 141.73;"
+   xml:space="preserve"
+   sodipodi:docname="Logo.svgz"><metadata
+   id="metadata19"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs17" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="640"
+   inkscape:window-height="480"
+   id="namedview15" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:#1D1D1B;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g
+   id="g12">
+	<circle
+   class="st0"
+   cx="70.87"
+   cy="70.87"
+   r="70.43"
+   id="circle4" />
+	<g
+   id="g10">
+		<path
+   class="st1"
+   d="M43.92,112.03h-5.75l6.08-36.15c0.71-4.98,5.26-9.01,10.17-9.01h5.65l-5.83,35.89    C53.54,107.87,48.92,112.03,43.92,112.03z"
+   id="path6" />
+		<path
+   class="st1"
+   d="M83.33,81.64l-0.01,0.13L97.9,93.21c1.63,1.28,2.48,3.32,2.22,5.39l-1.14,13.44h0    c-2.39,0-4.71-0.81-6.59-2.29l-2.27-1.8L71.6,92.29l3.34-25.29h7.7c3.98,0,7.79-3.08,8.49-7.07c0.75-4.26-2.18-7.79-6.35-7.79    H50.76c-4.06,0-7.97,1.66-11.02,4.34c-2.54,2.23-4.48,5.17-5.41,8.46l0,0.01c0,0.01,0,0.01,0,0.02c-0.01,0.02-0.04,0.04-0.07,0.04    h-0.01c-0.04,0-0.06-0.03-0.06-0.07l0.79-5.41c1.77-12.12,12.92-21.87,24.91-21.87h26.79c5.99,0,11.11,2.43,14.56,6.37    c3.45,3.95,5.22,9.43,4.48,15.51C104.3,70.97,94.53,80.44,83.33,81.64z"
+   id="path8" />
+	</g>
+</g>
+</svg>
